@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: com.grades.StudentRESTControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.227 s <<< FAILURE! - in com.grades.StudentRESTControllerTest
+deleteStudent  Time elapsed: 0.007 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+	at com.grades.StudentRESTControllerTest.deleteStudent(StudentRESTControllerTest.java:75)
+Caused by: org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+	at com.grades.StudentRESTControllerTest.deleteStudent(StudentRESTControllerTest.java:75)
+
+addStudent  Time elapsed: 0.098 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[Student successfully added]>
+	at com.grades.StudentRESTControllerTest.addStudent(StudentRESTControllerTest.java:49)
+
+updateStudent  Time elapsed: 0.101 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[{"id":8,"firstname":"Chris","lastname":"Edison","grade":12.0,"birth_date":"1996-09-19T21:00:00.000+0000","classroom_id":6}]> but was:<[Student successsfully updated ]>
+	at com.grades.StudentRESTControllerTest.updateStudent(StudentRESTControllerTest.java:70)
+
